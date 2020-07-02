@@ -1,5 +1,7 @@
 # jwt-parser
 
+[![GitHub](https://img.shields.io/github/license/laststem/jwt-parser)](https://github.com/laststem/jwt-parser/blob/master/LICENSE)
+
 ### Install
 ```bash
 go get -u github.com/laststem/jwt-parser
