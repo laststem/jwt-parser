@@ -1,4 +1,4 @@
-package jwt_parser
+package internal
 
 import (
 	"encoding/base64"

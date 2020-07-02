@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 	
-	. "github.com/laststem/jwt-parser"
+	"github.com/laststem/jwt-parser/internal"
 )
 
 const (
@@ -45,8 +45,8 @@ func main() {
 	}
 }
 
-func parse(raw string) *Token {
-	token, err := Parse(raw)
+func parse(raw string) *internal.Token {
+	token, err := internal.Parse(raw)
 	if err != nil {
 		log.Fatal(err)
 	}
