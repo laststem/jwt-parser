@@ -6,13 +6,13 @@ import (
 	"fmt"
 	"log"
 	"os"
-	
+
 	"github.com/laststem/jwt-parser/internal"
 )
 
 const (
-	printUsage    = 1
-	printAll = 2
+	printUsage = 1
+	printAll   = 2
 )
 
 const usage = `Usage:
@@ -57,16 +57,16 @@ func goDeep(payload map[string]interface{}, key []string) interface{} {
 	if len(key) == 1 {
 		return payload[key[0]]
 	}
-	
+
 	remain, ok := payload[key[0]]
 	if !ok {
 		log.Fatalf("not found key: %v", key)
 	}
-	
-	if p, ok := remain.(map[string]interface{}); ok{
+
+	if p, ok := remain.(map[string]interface{}); ok {
 		return goDeep(p, key[1:])
 	}
-	
+
 	log.Fatalf("not found key: %v", key)
 	return nil
 }

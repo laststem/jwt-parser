@@ -16,13 +16,13 @@ func Parse(raw string) (*Token, error) {
 	if len(parts) != 3 {
 		return nil, errors.New("invalid token")
 	}
-	
+
 	payload := parts[1]
 	decoded, err := base64.RawURLEncoding.DecodeString(payload)
 	if err != nil {
 		return nil, err
 	}
-	
+
 	var m map[string]interface{}
 	if err := json.Unmarshal(decoded, &m); err != nil {
 		return nil, err
