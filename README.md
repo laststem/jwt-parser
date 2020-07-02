@@ -2,7 +2,7 @@
 
 ### Install
 ```bash
-go get -u github.com/laststem/jwt-parser/cmd
+go get -u github.com/laststem/jwt-parser
 ```
 
 ### Usage
